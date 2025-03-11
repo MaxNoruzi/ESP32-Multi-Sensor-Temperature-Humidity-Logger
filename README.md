@@ -20,6 +20,7 @@ Additional Digital Temperature Sensor (Analog Output)
 
 ✅ Potential Google Sheets Integration (via ESP_Google_Sheet_Client)
 ![image](https://github.com/user-attachments/assets/d77108f6-a0c9-4264-aede-840ac4ac1720)
+
 How It Works
 
 1️⃣ Setup Phase
