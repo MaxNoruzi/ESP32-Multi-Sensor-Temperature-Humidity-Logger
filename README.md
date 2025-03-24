@@ -39,7 +39,7 @@ This simple Arduino project reads ambient temperature using a digital sensor and
 
 1. Install the required sensor library (e.g., `DHT` library by Adafruit if using DHT11/DHT22)
 2. Connect your sensor using the wiring table above
-3. Upload `temp (1).ino` to your board
+3. Upload `temp.ino` to your board
 4. Open **Serial Monitor** (9600 baud) to view live temperature readings
 
 ---
