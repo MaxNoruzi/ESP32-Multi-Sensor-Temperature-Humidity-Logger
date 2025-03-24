@@ -1,43 +1,59 @@
-Project Overview
+# 🌡️ Arduino Temperature Monitoring System
 
-This project is an ESP32-based multi-sensor monitoring system that collects temperature and humidity data from multiple sensors. The data is printed in CSV format for logging and can be integrated with Google Sheets for cloud storage.
+This simple Arduino project reads ambient temperature using a digital sensor and displays or logs the data. Ideal for learning sensor integration, serial communication, or for building the foundation of an IoT system.
 
-Features
+---
 
-✅ Multi-Sensor Data Collection
+## 🔧 Features
 
-DHT11 for Temperature & Humidity
+- 🌡️ Real-time temperature reading
+- 📟 Serial output to monitor temperature changes
+- 🧪 Support for sensors like **DHT11**, **DHT22**, or **LM35**
+- ⏱️ Adjustable delay interval for periodic monitoring
 
-DS18B20 Digital Temperature Sensor
+---
 
-Analog Thermistor for Temperature Measurement
+## 🧰 Hardware Used
 
-Additional Digital Temperature Sensor (Analog Output)
+- Arduino UNO / Nano / ESP32  
+- Temperature Sensor (e.g., DHT11 / DHT22 / LM35)  
+- 10K Resistor (for DHT sensors)  
+- Breadboard and Jumper Wires  
+- USB Cable for Serial Monitor
 
-✅ CSV Data Output for easy logging
+---
 
-✅ Expandable for IoT Applications
+## 📌 Wiring Guide (for DHT11)
 
-✅ Potential Google Sheets Integration (via ESP_Google_Sheet_Client)
+| Component | Arduino Pin |
+|----------|--------------|
+| VCC      | 5V or 3.3V    |
+| GND      | GND          |
+| DATA     | D2 (example)  |
 
-![image](https://github.com/user-attachments/assets/d77108f6-a0c9-4264-aede-840ac4ac1720)
+> 🛠 If you're using LM35, connect the analog output to A0 instead.
 
-How It Works
+---
 
-1️⃣ Setup Phase
+## 🛠 Setup & Run
 
-Initializes DHT11, DS18B20, and Thermistor.
+1. Install the required sensor library (e.g., `DHT` library by Adafruit if using DHT11/DHT22)
+2. Connect your sensor using the wiring table above
+3. Upload `temp (1).ino` to your board
+4. Open **Serial Monitor** (9600 baud) to view live temperature readings
 
-Sets input pins for analog and digital sensors.
+---
 
-2️⃣ Data Collection Loop
+## 🧠 Possible Extensions
 
-Reads temperature & humidity from DHT11.
+- 🌐 Add Wi-Fi (ESP32) to log data to cloud or Thingspeak
+- 📈 Display temperature on OLED/LCD screen
+- 🔔 Trigger buzzer/LED if temperature exceeds threshold
+- 🗂️ Store data to SD card or EEPROM
 
-Reads temperature from DS18B20.
+---
 
-Reads raw analog value from the thermistor and converts it to Celsius using the Steinhart-Hart equation.
+## 📬 Contact
 
-Reads raw analog value from another digital temperature sensor.
+Open a pull request or an issue if you'd like to contribute, improve, or request help with extensions.
 
-Prints all data in CSV format:
